@@ -26,7 +26,7 @@
     </form>
   </div>
 
-  {{#if post.length}}
+  {{#if posts}}
   <div class="col-md-6 post-list">
     <h3>Your Posts:</h3>
 
@@ -34,6 +34,9 @@
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+        <a class="" href=""/dashboard/post/{{id}}"><span class="icon-has-dark-text">
+          <i class=""fa-solid fa-pen"></i>
+        </span></a>"
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete post</button>
@@ -44,5 +47,7 @@
   {{/if}}
 </div>
 
+
+<script src="/js/new.js"></script>
 <script src="/js/edit.js"></script>
 <script src="/js/post.js"></script>
