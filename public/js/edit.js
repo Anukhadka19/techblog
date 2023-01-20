@@ -1,20 +1,20 @@
-const postId = document.querySelector('input[name="post-id]').value.trim();
+const userId = document.querySelector('input[name="puser-id]').value.trim();
 console.log("testing");
 console.log(postId);
 
 const editFormHandler = async (event) => {
     event.preventDefault();
 
-    const postName = document.querySelector('#post-name').value.trim();
-    const description = document.querySelector('#post-body').value.trim();
+    const title = document.querySelector('#post-title').value.trim();
+    const body = document.querySelector('#post-body').value.trim();
     
-    console.log(postName);
-    console.log(description);
+    console.log(title);
+    console.log(body);
     
-    if (postName && description) {
+    if (title && body) {
         const response = await fetch(`/api/posts`, {
           method: 'POST',
-          body: JSON.stringify({ postName, description }),
+          body: JSON.stringify({ title, body }),
           headers: {
             'Content-Type': 'application/json',
           },
